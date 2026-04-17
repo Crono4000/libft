@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -27,6 +28,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		index++;
 	}
 	str[len] = '\0';
+	return (str);
 }
 
 char *ft_strjoin(char const *s1, char const *s2)
@@ -35,12 +37,12 @@ char *ft_strjoin(char const *s1, char const *s2)
 	int		index1;
 	int		index2;
 
-	str = malloc(sizeof(char) * (strlen(s1) + strlen(s2)));
+	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)));
 	index1 = 0;
 	index2 = 0;
 	while (s1[index1])
 	{
-		str[index1] = s1[index];
+		str[index1] = s1[index1];
 		index1++;
 	}
 	while (s1[index1 + index2])
@@ -51,25 +53,16 @@ char *ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-static int strtrimlen(char const *s1, char const *set)
-{
-	int	index;
-	int size;
-
-	size = 0;
-	while (s1[0])
-	{
-		index = 0;
-		while (set[index])
-			if (s1[0] == set[index])
-			{
-				break ;
-			}
-		s1++;
-	}
-}
-
 char *ft_strtrim(char const *s1, char const *set)
 {
-	
+	unsigned int	iterator1;
+	unsigned int	iterator2;
+
+	iterator2 = ((unsigned int)ft_strlen(s1)) - 1;
+	iterator1 = 0;
+	while (ft_strchr(set, s1[iterator1]))
+		iterator1++;
+	while (ft_strchr(set, s1[iterator2]))
+		iterator2--;
+	return (ft_substr(s1, iterator1, iterator2 - iterator1 + 1));
 }

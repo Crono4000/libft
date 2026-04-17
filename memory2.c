@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int memcmp(const void *s1, const void *s2, size_t num)
+int ft_memcmp(const void *s1, const void *s2, size_t num)
 {
     int uu;
 
@@ -24,7 +24,7 @@ int memcmp(const void *s1, const void *s2, size_t num)
     return (0);
 }
 
-void *memchr(const void *ptr, int value, size_t num)
+void *ft_memchr(const void *ptr, int value, size_t num)
 {
     int				kk;
     unsigned char	*result;

@@ -3,7 +3,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 NAME = libft.a
 
-CFILES = ft_atoi.c ft_ischr.c ft_string.c memory.c list.c list2.c to.c
+CFILES = ft_atoi.c ft_ischr.c ft_string.c memory.c list.c list2.c to.c ft_split.c
 OFILES = $(CFILES:.c=.o)
 
 all: $(NAME)

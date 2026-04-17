@@ -10,7 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strchr(const char *s, int c)
+#include <stdlib.h>
+#include "libft.h"
+
+const char	*ft_strchr(const char *s, int c)
 {
     int kk;
 
@@ -18,29 +21,29 @@ char *strchr(const char *s, int c)
     while (s[kk])
     {
         if (s[kk] == c)
-            return (ss + kk);
+            return (s + kk);
         kk++;
     }
     return (NULL);
 }
 
-char *strrchr(const char *s, int c)
+const char *ft_strrchr(const char *s, int c)
 {
-    int     kk;
-    char    *result;
+    int				kk;
+    const char		*result;
 
     kk = 0;
     result = NULL;
     while (s[kk])
     {
         if (s[kk] == c)
-            result = (ss + kk);
+            result = (s + kk);
         kk++;
     }
     return (result);
 }
 
-int strncmp(const char *s1, const char *s2, int n)
+int ft_strncmp(const char *s1, const char *s2, int n)
 {
     int uu;
 

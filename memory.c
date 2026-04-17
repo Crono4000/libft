@@ -6,7 +6,7 @@
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:12:28 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/16 16:01:09 by afranco-         ###   ########.fr       */
+/*   Updated: 2026/04/17 17:44:30 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-void bzero(void *s, size_t size)
+void ft_bzero(void *s, size_t size)
 {
 	ft_memset(s, 0, size);
 }

@@ -6,13 +6,14 @@
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:16:07 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/14 13:16:26 by afranco-         ###   ########.fr       */
+/*   Updated: 2026/04/17 19:03:26 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	current;
 
