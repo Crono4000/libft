@@ -3,7 +3,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 NAME = libft.a
 
-CFILES = ft_atoi.c ft_ischr.c ft_string.c memory.c
+CFILES = ft_atoi.c ft_ischr.c ft_string.c memory.c list.c list2.c to.c
 OFILES = $(CFILES:.c=.o)
 
 all: $(NAME)
@@ -24,3 +24,6 @@ re: fclean all
 
 teste: re
 	cc $(CFLAGS) main.c -L. -lft
+
+tclean: fclean
+	rm -f ./a.out
