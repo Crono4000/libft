@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 16:18:01 by afranco-          #+#    #+#             */
-/*   Updated: 2026/02/10 16:18:01 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/18 12:04:50 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/18 12:04:50 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.c"
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	char	*new;
-	int		size;
-	int		ii;
+	char	*str;
+	int		index1;
+	int		index2;
 
-	size = 0;
-	while (src[size])
-		size++;
-	new = (char *) malloc(sizeof(char) * (size + 1));
-	ii = 0;
-	while (ii < size + 1)
+	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)));
+	index1 = 0;
+	index2 = 0;
+	while (s1[index1])
 	{
-		new[ii] = src[ii];
-		ii++;
+		str[index1] = s1[index1];
+		index1++;
 	}
-	return (new);
+	while (s1[index1 + index2])
+	{
+		str[index1 + index2] = s2[index2];
+		index2++;
+	}
+	return (str);
 }

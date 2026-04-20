@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 16:18:01 by afranco-          #+#    #+#             */
-/*   Updated: 2026/02/10 16:18:01 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/18 11:48:58 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/18 11:48:58 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.c"
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*new;
-	int		size;
-	int		ii;
+	int	rr;
 
-	size = 0;
-	while (src[size])
-		size++;
-	new = (char *) malloc(sizeof(char) * (size + 1));
-	ii = 0;
-	while (ii < size + 1)
+	rr = ((signed int) n) - 1;
+	if ((long) dest > (long) src)
 	{
-		new[ii] = src[ii];
-		ii++;
+		while (rr >= 0)
+		{
+			((unsigned char*) dest)[rr] = ((unsigned char*) src)[rr];
+			rr--;
+		}
 	}
-	return (new);
+	else
+		return (ft_memcpy(dest, src, n));
+	return (dest);
 }

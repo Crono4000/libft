@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   to.c                                               :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/16 16:01:35 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/16 16:01:35 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/18 11:44:41 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/18 11:44:41 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char tolower(char c)
-{
-    if (c >= 65 && c <= 90)
-        return (c + 32);
-    return (c);
-}
+#include "libft.c"
 
-char toupper(char c)
+char	*ft_strnstr(char *str, char *to_find, size_t size)
 {
-    if (c >= 97 && c <= 122)
-        return (c - 32);
-    return (c);
+	unsigned int	yy;
+	unsigned int	tt;
+
+	yy = 0;
+	tt = 0;
+	if (to_find[0] == '\0')
+		return (str);
+	while (str[yy] && yy < size)
+	{
+		if (str[yy] == to_find[tt])
+		{
+			tt++;
+			if (!to_find[tt])
+				return (str + yy - tt + 1);
+		}
+		else
+		{
+			tt = 0;
+		}
+		yy++;
+	}
+	return ((void *)0);
 }

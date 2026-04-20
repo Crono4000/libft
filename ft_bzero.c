@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 16:18:01 by afranco-          #+#    #+#             */
-/*   Updated: 2026/02/10 16:18:01 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/18 11:50:04 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/18 11:50:04 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.c"
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+void ft_bzero(void *s, size_t size)
 {
-	char	*new;
-	int		size;
-	int		ii;
-
-	size = 0;
-	while (src[size])
-		size++;
-	new = (char *) malloc(sizeof(char) * (size + 1));
-	ii = 0;
-	while (ii < size + 1)
-	{
-		new[ii] = src[ii];
-		ii++;
-	}
-	return (new);
+	ft_memset(s, 0, size);
 }

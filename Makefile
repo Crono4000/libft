@@ -22,8 +22,5 @@ fclean: clean
 
 re: fclean all
 
-teste: re
-	cc $(CFLAGS) main.c -L. -lft
-
-tclean: fclean
-	rm -f ./a.out
+#teste: re
+#	cc $(CFLAGS) main.c -L. -lft

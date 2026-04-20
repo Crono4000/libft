@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 16:18:01 by afranco-          #+#    #+#             */
-/*   Updated: 2026/02/10 16:18:01 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/18 17:01:31 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/18 17:01:31 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.c"
-
-char	*ft_strdup(char *src)
+int	ft_isalpha(int	c)
 {
-	char	*new;
-	int		size;
-	int		ii;
-
-	size = 0;
-	while (src[size])
-		size++;
-	new = (char *) malloc(sizeof(char) * (size + 1));
-	ii = 0;
-	while (ii < size + 1)
-	{
-		new[ii] = src[ii];
-		ii++;
-	}
-	return (new);
+	if ((c < 65 || c > 90) && (c < 97 || c > 122))
+		return (0);
+	else
+		return (1);
 }

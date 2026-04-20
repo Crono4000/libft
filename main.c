@@ -14,42 +14,6 @@ void print_bytes(void *arr, size_t size)
 	printf("\n");
 }
 
-void print_node_number(void *number)
-{
-	printf("%d ", ((int *) number)[0]);
-}
-
-void print_list(t_list *lista)
-{
-	ft_lstiter(lista, print_node_number);
-	printf("\n");
-}
-
-t_list *generate_list_of_numbers(int start, int end)
-{
-	if (start > end)
-		return (NULL);
-	t_list *result = NULL;
-	int it = 0;
-	int *values = malloc(sizeof(int) * (end - start));
-	while (start + it != end)
-	{
-		*(values + it) = start + it;
-		ft_lstadd_back(&result, ft_lstnew(values + it));
-		it += 1;
-	}
-	return result;
-}
-
-void do_nothing(void* x) {
-    (void)x;
-}
-
-void *double_int(void *x)
-{
-	*((int *)x) = *((int *)x) * 2;
-	return x;
-}
 
 int main()
 {

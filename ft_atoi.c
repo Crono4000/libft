@@ -5,47 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 13:08:09 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/14 13:37:33 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/18 16:31:52 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/18 17:00:49 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static void	put_atoi_inicial_values(char *str, int *rr, int *value, int *minus)
-{
-	*value = 0;
-	*minus = 0;
-	*rr = 0;
-	while (str[*rr] == ' ' || (str[*rr] >= 9 && str[*rr] <= 13))
-		(*rr)++;
-	while (str[*rr] == '-' || str[*rr] == '+')
-	{
-		if (str[*rr] == '-')
-			(*minus)++;
-		(*rr)++;
-	}
-}
+#include "libft.h"
 
 int	ft_atoi(char *str)
 {
-	int	rr;
-	int	value;
-	int	minus;
+    int i;
+    int result;
+    int sign;
 
-	put_atoi_inicial_values(str, &rr, &value, &minus);
-	while (str[rr] != '\0')
-	{
-		if (str[rr] >= 48 && str[rr] <= 57)
-		{
-			value = value * 10;
-			value += str[rr] - 48;
-			rr++;
-			continue ;
-		}
-		break ;
-	}
-	if (minus % 2 == 1)
-		value = value * -1;
-	return (value);
+    i = 0;
+    result = 0;
+    sign = 1;
+    while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+    if (str[i] == '+' || str[i] == '-')
+        if (str[i] == '-')
+            sign = -1;
+        i++;
+    while (is_digit(str[i]))
+        result = (result * 10) + (str[i++] - '0');
+    return (sign * result);
 }
 
 /*#include <stdio.h>

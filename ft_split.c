@@ -6,11 +6,10 @@
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 15:49:10 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/17 21:22:05 by afranco-         ###   ########.fr       */
+/*   Updated: 2026/04/18 16:34:24 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static int	count_strstr(char *str, char to_find)
@@ -20,6 +19,8 @@ static int	count_strstr(char *str, char to_find)
 
 	yy = 0;
 	count = 1;
+    if (str == NULL)
+        return (0);
 	while (str[yy])
 	{
 		if (str[yy] != to_find && (yy == 0 || str[yy - 1] == to_find))
@@ -38,17 +39,6 @@ static	void	free_split(char **ptr, int ind)
 		free(ptr[ind]);
 		ind--;
 	}
-}
-
-void	*calloc(size_t nmemb, size_t size)
-{
-	void	*result;
-
-	if (nmemb != 0 && size > MAX_SIZE / nmemb)
-		return (NULL);
-	result = malloc(size * nmemb);
-	ft_bzero(result, size * nmemb);
-	return (result);
 }
 
 char	**ft_split(char *str, char charset)
@@ -86,3 +76,24 @@ char	**ft_split(char *str, char charset)
 	result[ptr] = NULL;
 	return (result);
 }
+
+/*void print_split(char **spl)
+{
+	int g = 0;
+	while (spl[g] != NULL)
+	{
+		printf("%s\n", spl[g]);
+		g++;
+	}
+}
+
+int main(int argc, char **arg)
+{
+	if (argc <= 2)
+		return 0;
+	char **ss = ft_split(arg[1], arg[2][0]);
+	print_split(ss);
+	if (ss)
+		for()
+		free(ss);
+}*/
