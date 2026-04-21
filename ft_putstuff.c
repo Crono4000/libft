@@ -6,7 +6,7 @@
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 17:05:37 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/18 17:05:40 by afranco-         ###   ########.fr       */
+/*   Updated: 2026/04/21 16:21:35 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void	long_ft_putnbr(long nb, int fd)
 	}
 	if (nb > 9)
 	{
-		long_ft_putnbr(nb / 10);
+		long_ft_putnbr(nb / 10, fd);
 	}
 	c = 48 + (nb % 10);
 	write(fd, &c, 1);

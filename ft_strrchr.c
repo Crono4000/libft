@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-const char *ft_strrchr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)
 {
     int				kk;
-    const char		*result;
+    char		*result;
 
     kk = 0;
     result = NULL;
     while (s[kk])
     {
         if (s[kk] == c)
-            result = (s + kk);
+            result = (char *)(s + kk);
         kk++;
     }
     return (result);

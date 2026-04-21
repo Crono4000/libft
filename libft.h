@@ -6,14 +6,14 @@
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:44:04 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/17 20:59:28 by afranco-         ###   ########.fr       */
+/*   Updated: 2026/04/21 16:38:26 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stddef.h>
+#include <stdint.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -58,7 +58,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-const char *ft_strrchr(const char *s, int c);
 
 t_list *ft_lstnew(void *content);
 int ft_lstsize(t_list *lst);

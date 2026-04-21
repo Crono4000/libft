@@ -6,9 +6,11 @@
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 18:30:58 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/17 21:09:52 by afranco-         ###   ########.fr       */
+/*   Updated: 2026/04/21 16:41:44 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static	int	sizeNb(long nb)
 {
@@ -16,7 +18,7 @@ static	int	sizeNb(long nb)
 		return (sizeNb(-1 * nb) + 1);
 	if (nb < 10)
 		return (2);
-	return (size(nb / 10) + 1);
+	return (sizeNb(nb / 10) + 1);
 }
 
 static	void	recursive_itoa(int indice, char *result, int rest)
@@ -37,5 +39,6 @@ char	*ft_itoa(int n)
 	size = sizeNb(n);
 	result = malloc(sizeof(char) * size);
 	recursive_itoa(size - 1, result, n);
+    return (result);
 }
 

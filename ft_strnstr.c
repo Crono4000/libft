@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.c"
+#include "libft.h"
 
-char	*ft_strnstr(char *str, char *to_find, size_t size)
+char	*ft_strnstr(const char *str, const char *to_find, size_t size)
 {
 	unsigned int	yy;
 	unsigned int	tt;
@@ -20,14 +20,14 @@ char	*ft_strnstr(char *str, char *to_find, size_t size)
 	yy = 0;
 	tt = 0;
 	if (to_find[0] == '\0')
-		return (str);
+		return (char *)(str);
 	while (str[yy] && yy < size)
 	{
 		if (str[yy] == to_find[tt])
 		{
 			tt++;
 			if (!to_find[tt])
-				return (str + yy - tt + 1);
+				return (char *)(str + yy - tt + 1);
 		}
 		else
 		{
@@ -35,5 +35,5 @@ char	*ft_strnstr(char *str, char *to_find, size_t size)
 		}
 		yy++;
 	}
-	return ((void *)0);
+	return (NULL);
 }

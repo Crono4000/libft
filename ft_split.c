@@ -6,13 +6,13 @@
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 15:49:10 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/18 16:34:24 by afranco-         ###   ########.fr       */
+/*   Updated: 2026/04/21 16:55:47 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_strstr(char *str, char to_find)
+static int	count_strstr(const char *str, char to_find)
 {
 	int	count;
 	int	yy;
@@ -20,7 +20,7 @@ static int	count_strstr(char *str, char to_find)
 	yy = 0;
 	count = 1;
     if (str == NULL)
-        return (0);
+		return (0);
 	while (str[yy])
 	{
 		if (str[yy] != to_find && (yy == 0 || str[yy - 1] == to_find))
@@ -41,7 +41,7 @@ static	void	free_split(char **ptr, int ind)
 	}
 }
 
-char	**ft_split(char *str, char charset)
+char	**ft_split(const char *str, char charset)
 {
 	char	**result;
 	int		ptr;

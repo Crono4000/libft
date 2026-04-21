@@ -29,4 +29,3 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	str[len] = '\0';
 	return (str);
 }
-\
