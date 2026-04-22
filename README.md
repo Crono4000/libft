@@ -17,7 +17,7 @@ The goal of this project is to implement basic functions in order to learn linke
 | `make all` `make` `make libft.a` | Compiles and created the library libft.a |
 | `make clean` | Clean the file .o created when creating `libft.a`. |
 | `make fclean` | Calls clean from make and erases `libft.a`. |
-| `make re` | Clean everything and generated a new `libft.a` |
+| `make re` | Clean everything and generates a new `libft.a` |
 
 ### Usage
 
@@ -26,7 +26,7 @@ The goal of this project is to implement basic functions in order to learn linke
 	make
 	```
 
-2. Then you need compile the program with the `libft.a`:
+2. Then you need to compile the program with the `libft.a`:
 	```bash
 	cc program.c libft.a
 	```
@@ -61,63 +61,63 @@ The goal of this project is to implement basic functions in order to learn linke
 
 ## Library Functions
 
-### Parte 1 – Funções Libc
+### Part 1 – Libc Functions
 
-| Função        | Descrição |
-|--------------|----------|
-| ft_isalpha   | Verifica se um carácter é uma letra (A-Z, a-z) |
-| ft_isdigit   | Verifica se é um dígito (0-9) |
-| ft_isalnum   | Verifica se é letra ou número |
-| ft_isascii   | Verifica se pertence ao ASCII (0-127) |
-| ft_isprint   | Verifica se é imprimível |
-| ft_strlen    | Calcula o tamanho de uma string |
-| ft_memset    | Preenche memória com um valor |
-| ft_bzero     | Coloca memória a zero |
-| ft_memcpy    | Copia memória (sem overlap) |
-| ft_memmove   | Copia memória (com overlap seguro) |
-| ft_strlcpy   | Copia string com limite de tamanho |
-| ft_strlcat   | Concatena strings com limite |
-| ft_toupper   | Converte para maiúscula |
-| ft_tolower   | Converte para minúscula |
-| ft_strchr    | Procura primeira ocorrência de char |
-| ft_strrchr   | Procura última ocorrência de char |
-| ft_strncmp   | Compara duas strings até n chars |
-| ft_memchr    | Procura byte em memória |
-| ft_memcmp    | Compara blocos de memória |
-| ft_strnstr   | Procura substring dentro de limite |
-| ft_atoi      | Converte string para inteiro |
-| ft_calloc    | Aloca memória inicializada a 0 |
-| ft_strdup    | Duplica uma string |
+| Function        | Description |
+|----------------|------------|
+| ft_isalpha     | Checks if a character is an alphabetic letter (A-Z, a-z) |
+| ft_isdigit     | Checks if a character is a digit (0-9) |
+| ft_isalnum     | Checks if a character is alphanumeric (letter or digit) |
+| ft_isascii     | Checks if a character is within ASCII range (0–127) |
+| ft_isprint     | Checks if a character is printable |
+| ft_strlen      | Returns the length of a string |
+| ft_memset      | Fills a block of memory with a given value |
+| ft_bzero       | Sets a block of memory to zero |
+| ft_memcpy      | Copies memory from source to destination (no overlap handling) |
+| ft_memmove     | Copies memory safely (handles overlapping regions) |
+| ft_strlcpy     | Copies a string with size limit and null-termination |
+| ft_strlcat     | Concatenates strings with size limit |
+| ft_toupper     | Converts a character to uppercase |
+| ft_tolower     | Converts a character to lowercase |
+| ft_strchr      | Finds first occurrence of a character in a string |
+| ft_strrchr     | Finds last occurrence of a character in a string |
+| ft_strncmp     | Compares two strings up to n characters |
+| ft_memchr      | Searches for a byte in memory |
+| ft_memcmp      | Compares two memory blocks |
+| ft_strnstr     | Finds a substring within a string (bounded search) |
+| ft_atoi        | Converts a string to an integer |
+| ft_calloc      | Allocates zero-initialized memory |
+| ft_strdup      | Duplicates a string (allocates new memory) |
 
-### Parte 2 – Funções adicionais
+### Part 2 – Additional Functions
 
-| Função         | Descrição |
-|---------------|----------|
-| ft_substr     | Extrai substring de uma string |
-| ft_strjoin    | Junta duas strings numa nova |
-| ft_strtrim    | Remove caracteres do início/fim |
-| ft_split      | Divide string por delimitador |
-| ft_itoa       | Converte inteiro para string |
-| ft_strmapi    | Aplica função a cada char (nova string) |
-| ft_striteri   | Aplica função a cada char (in-place) |
-| ft_putchar_fd | Escreve char num file descriptor |
-| ft_putstr_fd  | Escreve string num file descriptor |
-| ft_putendl_fd | Escreve string + newline |
-| ft_putnbr_fd  | Escreve número num file descriptor |
+| Function         | Description |
+|------------------|------------|
+| ft_substr        | Extracts a substring from a string |
+| ft_strjoin       | Concatenates two strings into a new one |
+| ft_strtrim       | Removes specified characters from start and end of a string |
+| ft_split         | Splits a string into an array using a delimiter |
+| ft_itoa          | Converts an integer to a string |
+| ft_strmapi       | Applies a function to each character (creates new string) |
+| ft_striteri      | Applies a function to each character (modifies in place) |
+| ft_putchar_fd    | Writes a character to a file descriptor |
+| ft_putstr_fd     | Writes a string to a file descriptor |
+| ft_putendl_fd    | Writes a string followed by newline to a file descriptor |
+| ft_putnbr_fd     | Writes an integer to a file descriptor |
 
-### Parte 3 – Linked List
+### Part 3 – Linked List Functions
 
-| Função           | Descrição |
-|------------------|----------|
-| ft_lstnew        | Cria novo nó |
-| ft_lstadd_front  | Adiciona nó no início |
-| ft_lstsize       | Conta número de nós |
-| ft_lstlast       | Retorna último nó |
-| ft_lstadd_back   | Adiciona nó no fim |
-| ft_lstdelone     | Liberta um nó |
-| ft_lstclear      | Liberta lista inteira |
-| ft_lstiter       | Aplica função a cada nó |
-| ft_lstmap        | Cria nova lista transformada |
+| Function           | Description |
+|--------------------|------------|
+| ft_lstnew          | Creates a new list node |
+| ft_lstadd_front    | Adds a node at the beginning of the list |
+| ft_lstsize         | Counts the number of nodes in the list |
+| ft_lstlast         | Returns the last node of the list |
+| ft_lstadd_back     | Adds a node at the end of the list |
+| ft_lstdelone       | Deletes a single node (frees its content) |
+| ft_lstclear        | Deletes and frees the entire list |
+| ft_lstiter         | Applies a function to each node’s content |
+| ft_lstmap          | Creates a new list by applying a function to each node |
 
 ## Resources
 
