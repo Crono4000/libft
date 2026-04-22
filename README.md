@@ -134,4 +134,4 @@ Large Language Models were used for:
 
 ### Tests
 
-This projected was tested using francinette.
+This project was tested using francinette.
