@@ -15,17 +15,17 @@
 void *ft_memchr(const void *ptr, int value, size_t num)
 {
     unsigned int	kk;
-    unsigned char	*result;
     unsigned char	*nptr;
+    unsigned char   ch;
 
+    ch = value;
     kk = 0;
 	nptr = (unsigned char *) ptr;
-    result = NULL;
     while (kk < num)
     {
-        if (nptr[kk] == value)
-            result = (nptr + kk);
+        if (nptr[kk] == ch)
+            return (nptr + kk);
         kk++;
     }
-    return (result);
+    return (NULL);
 }

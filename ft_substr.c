@@ -16,16 +16,25 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 {
     char			*str;
 	unsigned int	index;
+    unsigned int    llen;
 
+    llen = ft_strlen(s);
+    if (llen - start < len)
+		len = llen - start;
 	index = 0;
 	str = malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
-	while (index < len)
+	while (start + index < llen && index < len)
 	{
 		str[index] = s[start + index];
 		index++;
 	}
-	str[len] = '\0';
+	str[index] = '\0';
 	return (str);
 }
+
+/*int main()
+{
+    printf("%s\n", ft_substr("tripouille", 0, 42000));
+}*/

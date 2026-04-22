@@ -14,14 +14,25 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-    int kk;
+    int     kk;
+    char    ch;
 
+    ch = c;
     kk = 0;
     while (s[kk])
     {
-        if (s[kk] == c)
+        if (s[kk] == ch)
             return (char *)(s + kk);
         kk++;
     }
+    if (s[kk] == ch)
+        return (char *)(s + kk);
     return (NULL);
 }
+
+/*int main()
+{
+    printf("%s\n", ft_strchr("tripouille", 'r'));
+    printf("%s\n", ft_strchr("tripouille", 0));
+    printf("%s\n", ft_strchr("tripouille", 't' + 256));
+}*/

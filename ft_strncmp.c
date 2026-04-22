@@ -22,8 +22,13 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
         if (uu >= n)
             break;
         if (s1[uu] != s2[uu])
-            return (s1[uu] - s2[uu]);
+            return ((unsigned char) s1[uu] - (unsigned char)s2[uu]);
         uu++;
     }
     return (0);
 }
+
+/*int main()
+{
+    printf("%d\n", ft_strncmp("1", "", 1));
+}*/

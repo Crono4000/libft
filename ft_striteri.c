@@ -6,7 +6,7 @@
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 21:18:23 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/21 16:56:57 by afranco-         ###   ########.fr       */
+/*   Updated: 2026/04/21 18:19:31 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
     i = 0;
 	while (s[i])
 	{
-		f(i, s);
+		f(i, s + i);
 		i++;
 	}
 }

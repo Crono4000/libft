@@ -6,7 +6,7 @@
 /*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 18:30:58 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/21 16:41:44 by afranco-         ###   ########.fr       */
+/*   Updated: 2026/04/21 18:34:31 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static	int	sizeNb(long nb)
 	return (sizeNb(nb / 10) + 1);
 }
 
-static	void	recursive_itoa(int indice, char *result, int rest)
+static	void	recursive_itoa(int indice, char *result, long rest)
 {
 	if (rest < 0)
 		rest *= (result[0] = '-', -1);
@@ -38,7 +38,13 @@ char	*ft_itoa(int n)
 
 	size = sizeNb(n);
 	result = malloc(sizeof(char) * size);
-	recursive_itoa(size - 1, result, n);
+	recursive_itoa(size - 2, result, (long) n);
+    result[size - 1] = '\0';
     return (result);
 }
 
+/*int main()
+{
+    printf("%s\n", ft_itoa(-2147483648));
+    printf("%s\n", ft_itoa(2147483647));
+}*/
