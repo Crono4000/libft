@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/17 21:10:25 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/22 19:39:14 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/22 19:03:31 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/22 19:03:41 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	unsigned int	i;
-	char			*sn;
-
-	i = 0;
-	sn = ft_strdup(s);
-	if (sn == NULL)
-		return (NULL);
-	while (sn[i])
+	if (lst == NULL)
+		return ;
+	while (lst != NULL)
 	{
-		sn[i] = f(i, sn[i]);
-		i++;
+		f(lst->content);
+		lst = lst->next;
 	}
-	return (sn);
 }

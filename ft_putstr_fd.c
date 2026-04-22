@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/17 21:10:25 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/22 19:39:14 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/22 19:08:08 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/22 19:08:43 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_putstr_fd(char *str, int fd)
 {
-	unsigned int	i;
-	char			*sn;
+	int	current;
 
-	i = 0;
-	sn = ft_strdup(s);
-	if (sn == NULL)
-		return (NULL);
-	while (sn[i])
+	current = 0;
+	while (str[current] != '\0')
 	{
-		sn[i] = f(i, sn[i]);
-		i++;
+		ft_putchar_fd(str[current], fd);
+		current++;
 	}
-	return (sn);
 }

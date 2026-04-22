@@ -6,7 +6,7 @@
 /*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 18:30:58 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/22 16:41:36 by afranco-         ###   ########.fr       */
+/*   Updated: 2026/04/22 19:38:41 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_itoa(int n)
 
 	size = size_nb(n);
 	result = malloc(sizeof(char) * size);
+	if (result == NULL)
+		return (NULL);
 	recursive_itoa(size - 2, result, (long)n);
 	result[size - 1] = '\0';
 	return (result);

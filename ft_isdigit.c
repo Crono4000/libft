@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/17 21:10:25 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/22 19:39:14 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/22 18:55:58 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/22 18:58:45 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int	ft_isdigit(int c)
 {
-	unsigned int	i;
-	char			*sn;
-
-	i = 0;
-	sn = ft_strdup(s);
-	if (sn == NULL)
-		return (NULL);
-	while (sn[i])
-	{
-		sn[i] = f(i, sn[i]);
-		i++;
-	}
-	return (sn);
+	if (c < 48 || c > 57)
+		return (0);
+	else
+		return (1);
 }

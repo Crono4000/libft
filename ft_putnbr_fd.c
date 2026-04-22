@@ -1,39 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstuff.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/18 17:05:37 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/22 14:31:51 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/22 19:09:24 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/22 19:09:27 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
-
-void	ft_putstr_fd(char *str, int fd)
-{
-	int	current;
-
-	current = 0;
-	while (str[current] != '\0')
-	{
-		ft_putchar_fd(str[current], fd);
-		current++;
-	}
-}
-
-void	ft_putendl_fd(char *s, int fd)
-{
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
-}
 
 static void	long_ft_putnbr(long nb, int fd)
 {
