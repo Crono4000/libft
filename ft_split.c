@@ -6,7 +6,7 @@
 /*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 15:49:10 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/22 16:35:49 by afranco-         ###   ########.fr       */
+/*   Updated: 2026/04/22 20:08:19 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ static void	free_split(char **ptr)
 		free(ptr[ind]);
 		ind++;
 	}
+	free(ptr);
 }
 
 static int	init_split(char ***result, int *ptr, int *ind2, int value)
