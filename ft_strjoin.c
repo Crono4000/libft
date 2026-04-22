@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/18 12:04:50 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/18 12:04:50 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/22 16:20:03 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/22 16:20:03 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	int		index1;
@@ -31,12 +31,12 @@ char *ft_strjoin(char const *s1, char const *s2)
 		str[index1 + index2] = s2[index2];
 		index2++;
 	}
-    str[index1 + index2] = '\0';
+	str[index1 + index2] = '\0';
 	return (str);
 }
 
 /*int main()
 {
-    printf("%s\n", ft_strjoin("tripouille", "42"));
-    printf("%s\n", ft_strjoin("", "42"));
+	printf("%s\n", ft_strjoin("tripouille", "42"));
+	printf("%s\n", ft_strjoin("", "42"));
 }*/

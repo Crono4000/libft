@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/18 11:47:18 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/18 11:47:18 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/22 14:30:52 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/22 14:30:52 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	rr = 0;
 	while (rr < n)
 	{
-		((unsigned char*) dest)[rr] = ((unsigned char*) src)[rr];
+		((unsigned char *)dest)[rr] = ((unsigned char *)src)[rr];
 		rr++;
 	}
 	return (dest);
@@ -36,9 +36,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	printf("\n");
 }
 
-int main()
+int	main(void)
 {
-    printf("###teste ft_memcpy###\n");
+	printf("###teste ft_memcpy###\n");
 	char mem3[20];
 	ft_memcpy(mem3, "1112", 5);
 	print_bytes(mem3, 20);

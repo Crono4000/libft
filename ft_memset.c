@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/18 11:46:01 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/18 11:46:01 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/22 14:31:35 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/22 14:31:35 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char		cha;
-	unsigned char		*ss;
-	size_t				iterator;
+	unsigned char	cha;
+	unsigned char	*ss;
+	size_t			iterator;
 
-	cha = (unsigned char) c;
-	ss = (unsigned char*) s;
+	cha = (unsigned char)c;
+	ss = (unsigned char *)s;
 	iterator = 0;
 	while (iterator < n)
 	{
 		ss[iterator] = cha;
 		iterator++;
 	}
-	return s;
+	return (s);
 }
 
 /*void print_bytes(void *arr, size_t size)
@@ -40,9 +40,9 @@ void	*ft_memset(void *s, int c, size_t n)
 	printf("\n");
 }
 
-int main()
+int	main(void)
 {
-    printf("###teste ft_memset###\n");
+	printf("###teste ft_memset###\n");
 	char mem[] = "fff553553";
 	ft_memset(mem, 32, 5);
 	print_bytes(mem, 9);

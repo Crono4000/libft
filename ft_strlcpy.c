@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/18 11:54:22 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/18 11:54:22 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/22 16:20:31 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/22 16:20:31 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	unsigned int	rr;
 
 	rr = 0;
-    if (size == 0)
+	if (size == 0)
 		return (ft_strlen(src));
 	while (src[rr] != '\0')
 	{
@@ -34,8 +34,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 
 /*int main()
 {
-    char src[] = "coucou";
-	char dest[10]; 
-    ft_memset(dest, 'A', 10);
-    ft_strlcpy(dest, src, 0);
+	char src[] = "coucou";
+	char dest[10];
+	ft_memset(dest, 'A', 10);
+	ft_strlcpy(dest, src, 0);
 }*/

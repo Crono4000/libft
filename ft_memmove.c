@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/18 11:48:58 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/18 11:48:58 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/22 14:31:04 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/22 14:31:04 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int	rr;
 
-	rr = ((signed int) n) - 1;
-	if ((long) dest > (long) src)
+	rr = ((signed int)n) - 1;
+	if ((long)dest > (long)src)
 	{
 		while (rr >= 0)
 		{
-			((unsigned char*) dest)[rr] = ((unsigned char*) src)[rr];
+			((unsigned char *)dest)[rr] = ((unsigned char *)src)[rr];
 			rr--;
 		}
 	}
@@ -41,9 +41,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	printf("\n");
 }
 
-int main()
+int	main(void)
 {
-    printf("###teste ft_memmove###\n");
+	printf("###teste ft_memmove###\n");
 	ft_memmove(mem3, "1112", 5);
 	print_bytes(mem3, 20);
 	ft_memmove(mem3, "wowwowwowwow\n", 13);

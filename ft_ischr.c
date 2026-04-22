@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ischr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 12:50:07 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/18 16:20:43 by afranco-         ###   ########.fr       */
+/*   Updated: 2026/04/22 14:29:03 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int	c)
+int	ft_isalpha(int c)
 {
 	if ((c < 65 || c > 90) && (c < 97 || c > 122))
 		return (0);
@@ -20,7 +20,7 @@ int	ft_isalpha(int	c)
 		return (1);
 }
 
-int	ft_isdigit(int	c)
+int	ft_isdigit(int c)
 {
 	if (c < 48 || c > 57)
 		return (0);
@@ -28,12 +28,12 @@ int	ft_isdigit(int	c)
 		return (1);
 }
 
-int	ft_isalnum(int	c)
+int	ft_isalnum(int c)
 {
 	return (ft_isdigit(c) || ft_isalpha(c));
 }
 
-int	ft_isascii(int	c)
+int	ft_isascii(int c)
 {
 	if (c < 0 || c > 127)
 		return (0);
@@ -41,7 +41,7 @@ int	ft_isascii(int	c)
 		return (1);
 }
 
-int	ft_isprint(int	c)
+int	ft_isprint(int c)
 {
 	if ((c >= 0 && c < 32) || c == 127)
 		return (0);

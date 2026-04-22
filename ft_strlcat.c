@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/21 16:23:07 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/21 16:23:07 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/22 16:20:18 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/22 16:20:18 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 	xx = 0;
 	yy = 0;
-    if (size == 0)
+	if (size == 0)
 		return (ft_strlen(src));
 	while (xx < size && dest[xx])
 		xx++;

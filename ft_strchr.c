@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afranco- <afranco-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afranco- <afranco-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/18 11:57:47 by afranco-          #+#    #+#             */
-/*   Updated: 2026/04/18 11:57:47 by afranco-         ###   ########.fr       */
+/*   Created: 2026/04/22 16:24:33 by afranco-          #+#    #+#             */
+/*   Updated: 2026/04/22 16:24:33 by afranco-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-    int     kk;
-    char    ch;
+	int		kk;
+	char	ch;
 
-    ch = c;
-    kk = 0;
-    while (s[kk])
-    {
-        if (s[kk] == ch)
-            return (char *)(s + kk);
-        kk++;
-    }
-    if (s[kk] == ch)
-        return (char *)(s + kk);
-    return (NULL);
+	ch = c;
+	kk = 0;
+	while (s[kk])
+	{
+		if (s[kk] == ch)
+			return ((char *)(s + kk));
+		kk++;
+	}
+	if (s[kk] == ch)
+		return ((char *)(s + kk));
+	return (NULL);
 }
 
 /*int main()
 {
-    printf("%s\n", ft_strchr("tripouille", 'r'));
-    printf("%s\n", ft_strchr("tripouille", 0));
-    printf("%s\n", ft_strchr("tripouille", 't' + 256));
+	printf("%s\n", ft_strchr("tripouille", 'r'));
+	printf("%s\n", ft_strchr("tripouille", 0));
+	printf("%s\n", ft_strchr("tripouille", 't' + 256));
 }*/
